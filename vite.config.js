@@ -6,9 +6,9 @@ export default defineConfig({
   plugins: [react()],
   build: {
     rollupOptions: {
-      external: ["react-icons/fa"],
+      external: [], // Remove "react-icons/fa" here
     },
-    outDir: 'dist', // matches the path in server.js
+    outDir: 'dist',
     sourcemap: true,
   },
   server: {
