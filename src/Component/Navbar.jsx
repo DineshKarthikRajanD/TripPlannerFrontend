@@ -55,7 +55,7 @@ const Navbar = () => {
 
     try {
       const response = await axios.get(
-        `http://localhost:5000/api/places?query=${value}`
+        `https://tripplanner-1.onrender.com/api/places?query=${value}`
       );
       setSearchResults(response.data || []);
     } catch (error) {
@@ -82,7 +82,14 @@ const Navbar = () => {
   return (
     <div>
       <nav className="flex justify-between py-3 content-center bg-slate-50 drop-shadow w-full">
-        <h1 className="ml-20 text-3xl font-bold">Travigo</h1>
+        <div className="flex items-center">
+          <img
+            src="https://img.freepik.com/free-vector/detailed-travel-logo_23-2148616611.jpg"
+            alt=""
+            className="h-14 w-14 rounded-full ml-16"
+          />
+          <h1 className="ml-4 text-3xl font-bold">Travigo</h1>
+        </div>
         <div className="flex items-center">
           <ul className="flex gap-5 font-medium mt-3">
             <li>

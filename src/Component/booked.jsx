@@ -13,7 +13,9 @@ const BookedPackagesContainer = ({ onReviewSubmit }) => {
     try {
       const name = localStorage.getItem("name");
       console.log(name);
-      const response = await axios.get(`http://localhost:5000/api/booked/${name}`);
+      const response = await axios.get(
+        `https://tripplanner-1.onrender.com/api/booked/${name}`
+      );
       setBookedPackages(response.data);
     } catch (err) {
       setError(err.message);
